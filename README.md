@@ -88,5 +88,3 @@ AI was utilized during the development of this project for the following tasks:
 Debugging Memory Leaks: AI assisted in analyzing the custom ft_strjoin function to identify why the previous leftover string was not being freed, and how to safely pass an uninitialized static pointer (NULL) into string manipulation functions.
 
 Edge Case Analysis: Used to clarify the expected behavior of EOF without a terminating newline character, ensuring the returned string format perfectly aligned with the project subject requirements.
-
-Algorithm Flow Structuring: Helped map out the step-by-step logic of splitting the accumulated string into an "extracted line" and an "updated leftover string."
