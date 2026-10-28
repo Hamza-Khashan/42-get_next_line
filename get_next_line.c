@@ -6,11 +6,13 @@
 /*   By: hkhashan <hkhashan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 15:05:37 by hkhashan          #+#    #+#             */
-/*   Updated: 2026/10/28 15:12:37 by hkhashan         ###   ########.fr       */
+/*   Updated: 2026/10/28 16:23:07 by hkhashan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
 
 char	*extract_line(char *leftover)
 {
@@ -108,3 +110,27 @@ char	*get_next_line(int fd)
 	leftover = update_leftover(leftover);
 	return (line);
 }
+/*
+int	main(void)
+{
+	int		fd;
+	char	*line1;
+
+	fd = open("test.txt", O_RDONLY);
+	if (fd == -1)
+	{
+		printf("error opining file\n");
+		return (1);
+	}
+	line1 = get_next_line(fd);
+	printf("%s", line1);
+	line1 = get_next_line(fd);
+	printf("%s", line1);
+	line1 = get_next_line(fd);
+	printf("%s", line1);
+	line1 = get_next_line(fd);
+	printf("%s", line1);
+	close(fd);
+	return (0);
+}
+*/
